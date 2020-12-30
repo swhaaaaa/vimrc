@@ -1,0 +1,25 @@
+1. Set Caps Lock to Ctrl:
+		sudo vi /etc/default/keyboard
+		XKBOPTIONS="ctrl:nocaps"
+	or
+		Execute command: setxkbmap -layout us -option ctrl:nocaps
+2. sudo apt-get install libncurses5-dev libncursesw5-dev build-essential
+3. Build ctags
+4. Build fzf
+5. echo 'Acquire::ForceIPv4 "true";' | sudo tee /etc/apt/apt.conf.d/99force-ipv4
+
+
+software-properties-gtk -> enable "source code"
+
+sudo apt-get install build-dep libx11-dev libxtst-dev
+apt-get install libxt-dev
+apt-get install python-dev python3-dev
+apt-get build-dep vim-gtk
+
+LUA
+sudo mkdir /usr/include/lua5.3/include/
+sudo cp -r /usr/include/lua5.3/* /usr/include/lua5.3/include/
+rm -rf /usr/include/lua5.3/include/include/
+sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.3.so  /usr/local/lib/liblua.so
+
+

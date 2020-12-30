@@ -1,0 +1,50 @@
+
+software-properties-gtk -> enable "source code"
+
+sudo apt-get install build-dep libx11-dev libxtst-dev
+apt-get install libxt-dev
+apt-get install python-dev python3-dev
+apt-get build-dep vim-gtk
+
+LUA
+sudo mkdir /usr/include/lua5.3/include/
+sudo cp -r /usr/include/lua5.3/* /usr/include/lua5.3/include/
+rm -rf /usr/include/lua5.3/include/include/
+sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.3.so  /usr/local/lib/liblua.so
+
+
+1. make distclean
+
+2. Run configuer
+	./configure --enable-luainterp=yes \
+	--prefix=/usr/bin \
+	--with-lua-prefix=/usr/include/lua5.3 \
+	--enable-perlinterp=yes \
+	--enable-pythoninterp=yes \
+	--with-python-command=python \
+	--with-python-config-dir=$(python-config --configdir) \
+	--enable-python3interp=yes \
+	--with-python3-command=python3 \
+	--with-python3-config-dir=$(python3-config --configdir) \
+	--enable-rubyinterp=yes \
+	--with-ruby-command=ruby \
+	--enable-fontset \
+	--enable-cscope \
+	--enable-channel \
+	--enable-tclinterp=yes \
+	--with-features=huge \
+	--with-x=yes \
+	--enable-multibyte \
+	--enable-gui=auto \
+	--prefix=/usr/local
+3. make VIMRUNTIMEDIR=/usr/local/share/vim/vim82
+4. make install
+
+
+
+--enable-gui=auto \
+--enable-gui=gnome2 \
+--enable-gui=gtk2 \
+
+--enable-sysmouse
+
