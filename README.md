@@ -1,5 +1,6 @@
 Other good references
 ---------------------
 
-* http://amix.dk/vim/vimrc.html
-
+* https://github.com/amix
+* https://github.com/kingofctrl/vim.cpp
+* https://evanli.github.io/Github-Ranking/Top100/Vim-script.html
