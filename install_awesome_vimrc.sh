@@ -21,10 +21,15 @@ endtry' > ~/.vimrc
 #touch /usr/local/share/vimctagsctags.cnf
 curl -fLo ~/.vim_runtime/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-if [  ! -d ~/.vim_runtime/plugged ]; then
-	echo "mkdir ~/.vim_runtime/plugged"
-	mkdir ~/.vim_runtime/plugged
-fi
+# .ycm_extra_conf.py
+curl -fLo ~/.ycm_extra_conf.py https://raw.githubusercontent.com/HmyBmny/vimrc/master/ycm_extra_conf.py
+
+#if [  ! -d ~/.vim_runtime/plugged ]; then
+#	echo "mkdir ~/.vim_runtime/plugged"
+#	mkdir ~/.vim_runtime/plugged
+#fi
 
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
+
+vim +PlugInstall
