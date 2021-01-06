@@ -27,6 +27,6 @@ sudo apt install build-essential cmake vim-nox python3-dev
 sudo apt install mono-complete golang nodejs default-jdk npm
 sudo apt-get install g++-8
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 700 --slave /usr/bin/g++ g++ /usr/bin/g++-7
-sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /usr/bin/g++ g++ /usr/bin/g++-8
 
 
