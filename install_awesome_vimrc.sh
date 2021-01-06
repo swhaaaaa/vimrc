@@ -19,15 +19,18 @@ catch
 endtry' > ~/.vimrc
 
 #touch /usr/local/share/vimctagsctags.cnf
+echo "curl plug.vim"
 curl -fLo ~/.vim_runtime/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#curl -fLo ~/.vim_runtime/autoload/pathogen.vim --create-dirs https://tpo.pe/pathogen.vim
 
 # .ycm_extra_conf.py
+echo "curl .ycm_extra_conf.py"
 curl -fLo ~/.ycm_extra_conf.py https://raw.githubusercontent.com/HmyBmny/vimrc/master/ycm_extra_conf.py
 
-#if [  ! -d ~/.vim_runtime/plugged ]; then
-#	echo "mkdir ~/.vim_runtime/plugged"
-#	mkdir ~/.vim_runtime/plugged
-#fi
+if [  ! -d ~/.vim_runtime/plugged_forked ]; then
+	echo "mkdir ~/.vim_runtime/plugged_forked"
+	mkdir ~/.vim_runtime/plugged_forked
+fi
 
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"

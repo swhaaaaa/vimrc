@@ -2,6 +2,8 @@ silent! if plug#begin('~/.vim_runtime/plugged')
 
 Plug 'mileszs/ack.vim'
 Plug 'tomasr/molokai'
+Plug 'junegunn/vim-plug'
+
 
 function! BuildYCM(info)
 if a:info.status == 'installed' || a:info.force
@@ -15,3 +17,4 @@ Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 call plug#end()
 
 endif
+

@@ -17,9 +17,9 @@ if has("gui_running")
     "colorscheme desert
 else
     "colorscheme ir_black
-    "colorscheme desert_my
-    colorscheme desert
-    hi Search		ctermfg=NONE ctermfg=Black ctermbg=Magenta
+    colorscheme desert_my
+    "colorscheme desert
+    "hi Search		ctermfg=NONE ctermfg=Black ctermbg=Magenta
 endif
 
 " Set font according to system
