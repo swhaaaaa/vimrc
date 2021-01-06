@@ -2,8 +2,8 @@
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 "call pathogen#infect('~/.vim_runtime/plugged')
-call pathogen#infect('~/.vim_runtime/plugged_forked')
-call pathogen#helptags()
+call pathogen#infect('~/.vim_runtime/plugged_forked/{}')
+"call pathogen#helptags()
 
 
 " ----------------------------------------------------------------------------

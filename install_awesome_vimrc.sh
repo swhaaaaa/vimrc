@@ -21,7 +21,7 @@ endtry' > ~/.vimrc
 #touch /usr/local/share/vimctagsctags.cnf
 echo "curl plug.vim"
 curl -fLo ~/.vim_runtime/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-#curl -fLo ~/.vim_runtime/autoload/pathogen.vim --create-dirs https://tpo.pe/pathogen.vim
+curl -fLo ~/.vim_runtime/autoload/pathogen.vim --create-dirs https://tpo.pe/pathogen.vim
 
 # .ycm_extra_conf.py
 echo "curl .ycm_extra_conf.py"
