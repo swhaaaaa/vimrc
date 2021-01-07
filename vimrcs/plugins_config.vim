@@ -118,9 +118,27 @@ let Grep_Skip_Files = '*.bak *~ *.o *.ko *.mod.c'
 "-i, --ignore-case     Ignore case distinctions in PATTERN
 let g:ackprg="ack -H --nocolor --nogroup --column -i"
 
-nmap <leader>ak :Ack <C-R>=expand("<cword>")<CR> 
-vmap <leader>ak y:Ack "<C-R>0" 
-map <leader>akk :Ack "" <left><left>
+nmap <leader>ak :Ack! <C-R>=expand("<cword>")<CR>
+vmap <leader>ak y:Ack! "<C-R>0"
+map <leader>akk :Ack! "" <left><left>
+
+
+""""""""""""""""""""""""""""""
+" => the_silver_searcher ag.vim
+" 1. sudo apt install silversearcher-ag
+""""""""""""""""""""""""""""""
+let g:ag_prg="ag --vimgrep --smart-case"
+" let g:ag_working_path_mode='r'
+let g:ag_highlight=1
+" let g:ag_format="%f:%l:%m"
+
+nmap <leader>ag :Ag! <C-R>=expand("<cword>")<CR>
+vmap <leader>ag y:Ag! "<C-R>0"
+map <leader>agg :Ag! "" <left><left>
+
+nmap <leader>agb :AgBuffer! <C-R>=expand("<cword>")<CR>
+vmap <leader>agb y:AgBuffer! "<C-R>0"
+map <leader>agbb :AgBuffer! "" <left><left>
 
 
 

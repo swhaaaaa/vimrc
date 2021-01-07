@@ -18,6 +18,9 @@ Plug 'preservim/nerdtree'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'preservim/tagbar'
 Plug 'yegappan/mru'
+Plug 'rking/ag.vim'
+
+
 " Plug 'yegappan/grep'
 
 
