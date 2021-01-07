@@ -32,6 +32,13 @@ if [  ! -d ~/.vim_runtime/plugged_forked ]; then
 	mkdir ~/.vim_runtime/plugged_forked
 fi
 
+if [  ! -d ~/.vim_runtime/temp_dirs ]; then
+	echo "mkdir ~/.vim_runtime/temp_dirs"
+	mkdir ~/.vim_runtime/temp_dirs
+fi
+
+
+
 
 echo "Installed the Ultimate Vim configuration successfully! Enjoy :-)"
 
