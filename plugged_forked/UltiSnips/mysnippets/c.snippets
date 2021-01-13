@@ -51,3 +51,71 @@ printk(KERN_EMERG "%s[%d] ${1:%s}\n", __FUNCTION__, __LINE__${1/([^%]|%%)*(%.)?.
 endsnippet
 
 
+snippet [[
+[${1}]${2}
+endsnippet
+
+snippet {{
+{${1}}${2}
+endsnippet
+
+snippet ""
+"${1}"${2}
+endsnippet
+
+snippet ((
+(${1})${2}
+endsnippet
+
+snippet un
+unsigned
+endsnippet
+
+snippet showtime
+{
+struct timeval tv;
+
+gettimeofday(&tv,NULL);
+fprintf(stderr, "%s[%d] %lu.%06lu\n", __FUNCTION__, __LINE__, tv.tv_sec, tv.tv_usec);
+}
+endsnippet
+
+snippet dumpbuf
+{
+int i;
+char *ptr = (char *)${1:NULL};
+int buf_len = ${2:0};
+char alpha_buf[32];
+
+memset(alpha_buf, 0x00, sizeof(alpha_buf));
+
+fprintf(stderr, "%s[%d] ${3:buf}: [%d]\n", __FUNCTION__, __LINE__${4:,} buf_len);
+for (i = 0; i < buf_len; ++i )
+{
+    if ( !(i % 16) )
+    {
+        fprintf(stderr, "%08x: ", i);
+    }
+
+    fprintf(stderr, "%02x ", ptr[i]);
+    alpha_buf[i % 16] = (ptr[i] >= 0x20) && (ptr[i] <= 0x7e) ? ptr[i] : '.';
+
+    if ( (i % 16) == 15 ) {
+        fprintf(stderr, "\t%s\n", alpha_buf);
+        memset(alpha_buf, 0x00, sizeof(alpha_buf));
+    }
+    else if ( (i % 16) == 7 )
+    {
+        fprintf(stderr, " ");
+    }
+}
+fprintf(stderr, "\t%s\n", alpha_buf);
+memset(alpha_buf, 0x00, sizeof(alpha_buf));
+}
+endsnippet
+
+snippet fpr
+fprintf(${1:stderr}, "${2:%s}\n"${2/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$3${2/([^%]|%%)*(%.)?.*/(?2:\);)/}
+endsnippet
+
+

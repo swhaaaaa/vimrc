@@ -20,11 +20,13 @@ Plug 'preservim/tagbar'
 Plug 'yegappan/mru'
 Plug 'rking/ag.vim'
 
+" Track the engine.
+Plug 'SirVer/ultisnips'
 
-" Plug 'yegappan/grep'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
 
-
-
+Plug 'tpope/vim-sleuth'
 
 
 

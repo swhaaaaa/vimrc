@@ -141,6 +141,13 @@ vmap <leader>agb y:AgBuffer! "<C-R>0"
 map <leader>agbb :AgBuffer! "" <left><left>
 
 
+""""""""""""""""""""""""""""""
+" => UltiSnips
+""""""""""""""""""""""""""""""
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab><tab>"
+let g:UltiSnipsSnippetDirectories=["mysnippets"]
+
 
 """"""""""""""""""""""""""""""
 " => cscope.vim

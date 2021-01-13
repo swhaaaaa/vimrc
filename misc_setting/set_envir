@@ -31,3 +31,6 @@ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 800 --slave /
 
 The Silver Searcher
 sudo apt install silversearcher-ag
+
+Gtk-Message: 15:47:06.348: Failed to load module "canberra-gtk-module"
+sudo apt install libcanberra-gtk-module libcanberra-gtk3-module
