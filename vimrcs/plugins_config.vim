@@ -146,7 +146,7 @@ map <leader>agbb :AgBuffer! "" <left><left>
 """"""""""""""""""""""""""""""
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab><tab>"
-let g:UltiSnipsSnippetDirectories=["mysnippets"]
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
 
 
 """"""""""""""""""""""""""""""
