@@ -10,18 +10,18 @@ call pathogen#infect('~/.vim_runtime/plugged_forked/{}')
 " YouCompleteMe
 " ----------------------------------------------------------------------------
 
-set completeopt-=preview
+"set completeopt-=preview
 
-nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
-nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
-inoremap <leader>; <C-x><C-o>
+"nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
+"nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+"inoremap <leader>; <C-x><C-o>
 
-let g:ycm_complete_in_comments=1
-let g:ycm_confirm_extra_conf=0
-let g:ycm_collect_identifiers_from_tags_files=0
-let g:ycm_min_num_of_chars_for_completion=1
-let g:ycm_cache_omnifunc=0
-let g:ycm_seed_identifiers_with_syntax=1
+"let g:ycm_complete_in_comments=1
+"let g:ycm_confirm_extra_conf=0
+"let g:ycm_collect_identifiers_from_tags_files=0
+"let g:ycm_min_num_of_chars_for_completion=1
+"let g:ycm_cache_omnifunc=0
+"let g:ycm_seed_identifiers_with_syntax=1
 
 
 """"""""""""""""""""""""""""""
@@ -145,8 +145,54 @@ map <leader>agbb :AgBuffer! "" <left><left>
 " => UltiSnips
 """"""""""""""""""""""""""""""
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab><tab>"
+"let g:UltiSnipsExpandTrigger="<tab><tab>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mysnippets"]
+
+
+""""""""""""""""""""""""""""""
+" => super tab
+""""""""""""""""""""""""""""""
+let g:SuperTabPluginLoaded=1 " Avoid load SuperTab Plugin
+let g:SuperTabDefaultCompletionType='context'
+let g:SuperTabContextDefaultCompletionType='<c-p>'
+"let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
+"let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
+"let g:SuperTabContextDiscoverDiscovery =
+" \ ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+
+""""""""""""""""""""""""""""""
+" => Tagbar setting
+""""""""""""""""""""""""""""""
+let g:tagbar_width = 40
+let g:tagbar_expand = 1
+"let g:tagbar_left = 1
+"let g:tagbar_autoshowtag = 1
+let g:tagbar_ctags_bin = 'ctags'
+nmap <silent> <Leader>bb :TagbarToggle<cr>
+"au VimEnter *  TagbarOpen
+
+""""""""""""""""""""""""""""""
+" => omnicppcomplete
+""""""""""""""""""""""""""""""
+set completeopt=longest,menu
+let OmniCpp_MayCompleteDot = 1
+let OmniCpp_MayCompleteArrow = 1
+let OmniCpp_MayCompleteScope = 1
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_DefaultNamespace=["std"]
+let OmniCpp_ShowPrototypeInAbbr=1
+let OmniCpp_SelectFirstItem = 2
+
+
+""""""""""""""""""""""""""""""
+" => fzf.vim
+" https://github.com/junegunn/fzf
+" https://github.com/junegunn/fzf.vim#installation
+""""""""""""""""""""""""""""""
+nmap <C-F>   :Files<CR>
+nmap <C-F><C-F>   :Files
+nmap <C-B> :Buffers<CR>
+let g:fzf_action = { 'ctrl-b': 'edit' }
 
 
 """"""""""""""""""""""""""""""

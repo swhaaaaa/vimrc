@@ -1,12 +1,12 @@
 silent! if plug#begin('~/.vim_runtime/plugged')
 
-function! BuildYCM(info)
-if a:info.status == 'installed' || a:info.force
-  !./install.py --clang-completer
-endif
-endfunction
+"function! BuildYCM(info)
+"if a:info.status == 'installed' || a:info.force
+"  !./install.py --clang-completer
+"endif
+"endfunction
 
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+"Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 Plug 'mileszs/ack.vim'
 Plug 'tomasr/molokai'
@@ -28,6 +28,12 @@ Plug 'honza/vim-snippets'
 
 Plug 'tpope/vim-sleuth'
 
+Plug 'vim-scripts/OmniCppComplete'
+Plug 'preservim/tagbar'
+Plug 'ervandew/supertab'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 
 
