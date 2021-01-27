@@ -208,12 +208,53 @@ let g:go_fmt_command = "goimports"
 """"""""""""""""""""""""""""""
 " => fidian/hexmode 
 """"""""""""""""""""""""""""""
-nnoremap <C-H> :Hexmode<CR>
-inoremap <C-H> <Esc>:Hexmode<CR>
-vnoremap <C-H> :<C-U>Hexmode<CR>
+nnoremap <Leader>hex :Hexmode<CR>
+inoremap <Leader>hex <Esc>:Hexmode<CR>
+vnoremap <Leader>hex :<C-U>Hexmode<CR>
 let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o'
 let g:hexmode_autodetect = 1
 let g:hexmode_xxd_options = '-g 1'
+
+"""""""""""""""""""""""""""""""
+"" => easytags
+"" => http://peterodding.com/code/vim/easytags/
+"" => http://github.com/xolox/vim-easytags
+"""""""""""""""""""""""""""""""
+"let g:easytags_cmd = '/usr/bin/ctags-exuberant'
+let g:easytags_cmd = 'ctags-exuberant'
+let g:easytags_opts = ['--options=$VIM\ctags\ctags.cnf']
+let g:easytags_syntax_keyword = 'always'
+let g:easytags_languages = {
+			\   'language': {
+			\     'cmd': g:easytags_cmd,
+			\       'args': [],
+			\       'fileoutput_opt': '-f',
+			\       'stdout_opt': '-f-',
+			\       'recurse_flag': '-R'
+			\   }
+			\}
+let g:easytags_file = '~/.vim/tags'
+set tags=./tags;
+let g:easytags_dynamic_files = 1
+let g:easytags_events = ['BufWritePost']
+let g:easytags_always_enabled = 1
+let g:easytags_on_cursorhold = 0
+let g:easytags_auto_update = 0
+let g:easytags_auto_highlight = 0
+let g:easytags_autorecurse = 1
+let g:easytags_include_members = 1
+" If you like one of the existing styles you can link them:
+highlight link cMember Special
+  
+"  " You can also define your own style if you want:
+highlight cMember gui=italic
+
+let g:easytags_resolve_links = 1
+let g:easytags_suppress_ctags_warning = 1
+let g:easytags_suppress_report = 1
+let g:easytags_python_enabled = 1
+let g:easytags_python_script = 1
+
 
 
 """"""""""""""""""""""""""""""

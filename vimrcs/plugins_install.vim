@@ -32,6 +32,12 @@ Plug 'vim-scripts/OmniCppComplete'
 Plug 'preservim/tagbar'
 Plug 'ervandew/supertab'
 Plug 'fidian/hexmode'
+Plug 'jiangmiao/auto-pairs'
+Plug 'xolox/vim-easytags'
+
+
+
+
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
