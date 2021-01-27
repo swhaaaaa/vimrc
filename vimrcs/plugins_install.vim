@@ -31,9 +31,14 @@ Plug 'tpope/vim-sleuth'
 Plug 'vim-scripts/OmniCppComplete'
 Plug 'preservim/tagbar'
 Plug 'ervandew/supertab'
+Plug 'fidian/hexmode'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+Plug 'vim-ruby/vim-ruby'
+Plug 'fatih/vim-go'
+
 
 
 

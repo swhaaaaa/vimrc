@@ -194,6 +194,27 @@ nmap <C-F><C-F>   :Files
 nmap <C-B> :Buffers<CR>
 let g:fzf_action = { 'ctrl-b': 'edit' }
 
+""""""""""""""""""""""""""""""
+" => Vim-Ruby
+""""""""""""""""""""""""""""""
+let g:ruby_indent_access_modifier_style = 'indent'
+
+""""""""""""""""""""""""""""""
+" => Vim-GO
+""""""""""""""""""""""""""""""
+let g:go_disable_autoinstall = 0
+let g:go_fmt_command = "goimports"
+
+""""""""""""""""""""""""""""""
+" => fidian/hexmode 
+""""""""""""""""""""""""""""""
+nnoremap <C-H> :Hexmode<CR>
+inoremap <C-H> <Esc>:Hexmode<CR>
+vnoremap <C-H> :<C-U>Hexmode<CR>
+let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o'
+let g:hexmode_autodetect = 1
+let g:hexmode_xxd_options = '-g 1'
+
 
 """"""""""""""""""""""""""""""
 " => cscope.vim
